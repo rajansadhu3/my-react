@@ -1,0 +1,36 @@
+body {
+  background-color: #ff5200;
+  color: #fff;
+}
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+.cardContainerWrapper {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 3px solid #fff;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #fff;
+}
+.cardItem {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 5px 5px;
+  width: 200px;
+  text-align: center;
+}
+.cardItem img {
+  margin: 0 auto;
+  text-align: center;
+}
