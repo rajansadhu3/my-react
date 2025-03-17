@@ -4,7 +4,6 @@ import { CDN_IMAGANARY_URL } from "../utils/constants";
 const Card = (props) => {
   const { resData } = props;
   const { name, cuisines, locality, avgRatingString } = resData.info;
-  console.log(resData);
   return (
     <div className="cardItem">
       <img
