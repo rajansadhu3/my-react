@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 import { resObj } from "../utils/mockData";
 
 const CardContainer = () => {
+  const [listOfResturants, setlistOfResturants] = useState(resObj);
   return (
     <div>
       <div className="filter">
-        <button className="filter-btn">Top Rated Resturants</button>
+        <button
+          onClick={() => {
+            const filteredList = listOfResturants.filter(
+              (res) => res.info.avgRating > 4.5
+            );
+            setlistOfResturants(filteredList);
+          }}
+          className="filter-btn"
+        >
+          Top Rated Resturants
+        </button>
       </div>
       <div className="cardContainerWrapper">
-        {resObj.map((resturantItem, index) => (
+        {listOfResturants.map((resturantItem, index) => (
           <Card key={index} resData={resturantItem} />
         ))}
       </div>
